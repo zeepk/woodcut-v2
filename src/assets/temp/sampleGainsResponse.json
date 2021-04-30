@@ -1,0 +1,618 @@
+{
+    "username": "zee+pk",
+    "displayName": "zee pk",
+    "statusMessage": null,
+    "sampleSkillGains": [
+        {
+            "skillId": 0,
+            "xp": 3633284913,
+            "level": 2898,
+            "rank": 3849,
+            "dayGain": 2775014,
+            "weekGain": 10643912,
+            "monthGain": 80462710,
+            "yearGain": 408706646,
+            "dxpGain": null
+        },
+        {
+            "skillId": 1,
+            "xp": 109816012,
+            "level": 99,
+            "rank": 13503,
+            "dayGain": 31,
+            "weekGain": 44,
+            "monthGain": 68860,
+            "yearGain": 72300,
+            "dxpGain": null
+        },
+        {
+            "skillId": 2,
+            "xp": 107266931,
+            "level": 99,
+            "rank": 26670,
+            "dayGain": 62,
+            "weekGain": 87,
+            "monthGain": 68903,
+            "yearGain": 98741,
+            "dxpGain": null
+        },
+        {
+            "skillId": 3,
+            "xp": 104387853,
+            "level": 99,
+            "rank": 18613,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 68816,
+            "yearGain": 71655,
+            "dxpGain": null
+        },
+        {
+            "skillId": 4,
+            "xp": 160973453,
+            "level": 99,
+            "rank": 21520,
+            "dayGain": 21,
+            "weekGain": 56303,
+            "monthGain": 193933,
+            "yearGain": 240134,
+            "dxpGain": null
+        },
+        {
+            "skillId": 5,
+            "xp": 125600136,
+            "level": 99,
+            "rank": 19311,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 180641,
+            "yearGain": 209014,
+            "dxpGain": null
+        },
+        {
+            "skillId": 6,
+            "xp": 104324963,
+            "level": 99,
+            "rank": 8870,
+            "dayGain": 0,
+            "weekGain": 45005,
+            "monthGain": 19540960,
+            "yearGain": 47830904,
+            "dxpGain": null
+        },
+        {
+            "skillId": 7,
+            "xp": 128252002,
+            "level": 99,
+            "rank": 19451,
+            "dayGain": 0,
+            "weekGain": 206239,
+            "monthGain": 206239,
+            "yearGain": 277150,
+            "dxpGain": null
+        },
+        {
+            "skillId": 8,
+            "xp": 104380179,
+            "level": 99,
+            "rank": 8034,
+            "dayGain": 0,
+            "weekGain": 953353,
+            "monthGain": 25116720,
+            "yearGain": 36113209,
+            "dxpGain": null
+        },
+        {
+            "skillId": 9,
+            "xp": 105778030,
+            "level": 99,
+            "rank": 6249,
+            "dayGain": 0,
+            "weekGain": 1479154,
+            "monthGain": 15346249,
+            "yearGain": 45991279,
+            "dxpGain": null
+        },
+        {
+            "skillId": 10,
+            "xp": 104952652,
+            "level": 99,
+            "rank": 6227,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 159711,
+            "yearGain": 656816,
+            "dxpGain": null
+        },
+        {
+            "skillId": 11,
+            "xp": 117219855,
+            "level": 99,
+            "rank": 7824,
+            "dayGain": 0,
+            "weekGain": 45000,
+            "monthGain": 110097,
+            "yearGain": 1013692,
+            "dxpGain": null
+        },
+        {
+            "skillId": 12,
+            "xp": 145737442,
+            "level": 99,
+            "rank": 5181,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 207394,
+            "dxpGain": null
+        },
+        {
+            "skillId": 13,
+            "xp": 104640612,
+            "level": 99,
+            "rank": 6536,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 21013,
+            "yearGain": 53152716,
+            "dxpGain": null
+        },
+        {
+            "skillId": 14,
+            "xp": 200000000,
+            "level": 99,
+            "rank": 1088,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "skillId": 15,
+            "xp": 104387512,
+            "level": 99,
+            "rank": 15240,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 31491326,
+            "dxpGain": null
+        },
+        {
+            "skillId": 16,
+            "xp": 109241350,
+            "level": 120,
+            "rank": 14925,
+            "dayGain": 0,
+            "weekGain": 45000,
+            "monthGain": 45002,
+            "yearGain": 492747,
+            "dxpGain": null
+        },
+        {
+            "skillId": 17,
+            "xp": 106466599,
+            "level": 99,
+            "rank": 6375,
+            "dayGain": 105046,
+            "weekGain": 298968,
+            "monthGain": 370946,
+            "yearGain": 19059365,
+            "dxpGain": null
+        },
+        {
+            "skillId": 18,
+            "xp": 108517649,
+            "level": 99,
+            "rank": 14371,
+            "dayGain": 1529558,
+            "weekGain": 3898773,
+            "monthGain": 3942461,
+            "yearGain": 8216707,
+            "dxpGain": null
+        },
+        {
+            "skillId": 19,
+            "xp": 118889151,
+            "level": 120,
+            "rank": 19925,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 138224,
+            "yearGain": 414878,
+            "dxpGain": null
+        },
+        {
+            "skillId": 20,
+            "xp": 200000000,
+            "level": 120,
+            "rank": 6412,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 18807704,
+            "dxpGain": null
+        },
+        {
+            "skillId": 21,
+            "xp": 104291686,
+            "level": 99,
+            "rank": 5179,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 5042602,
+            "yearGain": 26373056,
+            "dxpGain": null
+        },
+        {
+            "skillId": 22,
+            "xp": 106220649,
+            "level": 99,
+            "rank": 7603,
+            "dayGain": 596318,
+            "weekGain": 1507176,
+            "monthGain": 1607541,
+            "yearGain": 53839482,
+            "dxpGain": null
+        },
+        {
+            "skillId": 23,
+            "xp": 110230662,
+            "level": 99,
+            "rank": 4362,
+            "dayGain": 0,
+            "weekGain": 45000,
+            "monthGain": 150000,
+            "yearGain": 585452,
+            "dxpGain": null
+        },
+        {
+            "skillId": 24,
+            "xp": 200000000,
+            "level": 99,
+            "rank": 3092,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "skillId": 25,
+            "xp": 200000000,
+            "level": 120,
+            "rank": 11496,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "skillId": 26,
+            "xp": 105249800,
+            "level": 99,
+            "rank": 6326,
+            "dayGain": 253578,
+            "weekGain": 902210,
+            "monthGain": 965625,
+            "yearGain": 54902920,
+            "dxpGain": null
+        },
+        {
+            "skillId": 27,
+            "xp": 200000000,
+            "level": 120,
+            "rank": 4500,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "skillId": 28,
+            "xp": 136459735,
+            "level": 120,
+            "rank": 14782,
+            "dayGain": 290400,
+            "weekGain": 1161600,
+            "monthGain": 7118167,
+            "yearGain": 8588005,
+            "dxpGain": null
+        }
+    ],
+    "minigameGains": [
+        {
+            "minigameId": 29,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 30,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 31,
+            "score": 3866811,
+            "rank": 28685,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 32,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 33,
+            "score": 924,
+            "rank": 5253,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 34,
+            "score": 1965,
+            "rank": 25162,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 35,
+            "score": 2081,
+            "rank": 14043,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 36,
+            "score": 2012,
+            "rank": 16265,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 37,
+            "score": 2002,
+            "rank": 33882,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 38,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 39,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 40,
+            "score": 1258,
+            "rank": 21065,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 41,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 42,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 43,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 44,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 45,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 46,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 47,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 48,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 49,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 50,
+            "score": 39,
+            "rank": 84267,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 51,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 52,
+            "score": 0,
+            "rank": 0,
+            "dayGain": 1,
+            "weekGain": 1,
+            "monthGain": 1,
+            "yearGain": 1,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 53,
+            "score": 23250,
+            "rank": 2904,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": -20,
+            "yearGain": 65,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 54,
+            "score": 4,
+            "rank": 119424,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 55,
+            "score": 7,
+            "rank": 65786,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 56,
+            "score": 105,
+            "rank": 48051,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        },
+        {
+            "minigameId": 57,
+            "score": 97,
+            "rank": 38512,
+            "dayGain": 0,
+            "weekGain": 0,
+            "monthGain": 0,
+            "yearGain": 0,
+            "dxpGain": null
+        }
+    ]
+}
