@@ -1,13 +1,25 @@
 <template>
 	<div class="ma-10">
 		<v-data-table
-			:headers="skillTableHeaders"
+			:headers="tableHeaders"
 			:items="skills"
 			disable-pagination
 			hide-default-footer
 		>
 			<template v-slot:[`header.weekGain`]="{}">
-				<SkillTableRangeSelector />
+				<SkillTableRangeSelector 
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)" 
+				v-bind:currentOption="selectedRange" />
+			</template>
+			<template v-slot:[`header.monthGain`]="{}">
+				<SkillTableRangeSelector 
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)" 
+				v-bind:currentOption="selectedRange" />
+			</template>
+			<template v-slot:[`header.yearGain`]="{}">
+				<SkillTableRangeSelector 
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)" 
+				v-bind:currentOption="selectedRange" />
 			</template>
 			<template v-slot:[`item.skillIcon`]="{ item }">
 				<div class="d-flex flex-row align-center">
@@ -22,24 +34,16 @@
 				<div>{{ item.rank.toLocaleString('en', { useGrouping: true }) }}</div>
 			</template>
 			<template v-slot:[`item.dayGain`]="{ item }">
-				<div>
-					{{ item.dayGain.toLocaleString('en', { useGrouping: true }) }}
-				</div>
+				<SkillTableGainItem :value="item.dayGain" />
 			</template>
 			<template v-slot:[`item.weekGain`]="{ item }">
-				<div>
-					{{ item.weekGain.toLocaleString('en', { useGrouping: true }) }}
-				</div>
+				<SkillTableGainItem :value="item.weekGain" />
 			</template>
 			<template v-slot:[`item.monthGain`]="{ item }">
-				<div>
-					{{ item.monthGain.toLocaleString('en', { useGrouping: true }) }}
-				</div>
+				<SkillTableGainItem :value="item.monthGain" />
 			</template>
 			<template v-slot:[`item.yearGain`]="{ item }">
-				<div>
-					{{ item.yearGain.toLocaleString('en', { useGrouping: true }) }}
-				</div>
+				<SkillTableGainItem :value="item.yearGain" />
 			</template>
 		</v-data-table>
 	</div>
@@ -48,6 +52,7 @@
 <script lang="js">
 import Vue from 'vue';
 import SkillTableRangeSelector from '../components/SkillTableRangeSelector.vue';
+import SkillTableGainItem from '../components/SkillTableGainItem.vue';
 import sampleGains from '../assets/temp/sampleGainsResponse.json';
 import { mapGetters, mapActions } from 'vuex';
 import { skillTableHeaders, skillTableRangeOptions } from '../utils/constants';
@@ -57,13 +62,14 @@ export default Vue.extend({
 	name: 'SkillsTable',
 	components: {
 		SkillTableRangeSelector,
+		SkillTableGainItem,
 	},
 	data() {
 		return {
 			skillTableRangeOptions,
 			skillIcon,
-			skillTableHeaders: [...skillTableHeaders, skillTableRangeOptions[0]],
-			selectedRange: skillTableHeaders[0],
+			selectedRange: skillTableRangeOptions[0],
+			skillTableHeaders
 		};
 	},
 	methods: {
@@ -73,7 +79,6 @@ export default Vue.extend({
 		}),
 		changeSelectedRange(option) {
 			this.selectedRange = option;
-			return 'hi';
 		},
 	},
 	computed: {
@@ -94,6 +99,9 @@ export default Vue.extend({
 				};
 			});
 		},
+		tableHeaders: function() {
+			return [...this.skillTableHeaders, this.selectedRange];
+		}
 	},
 	async mounted() {
 		if (!this.isDev) {

@@ -25,15 +25,17 @@ import Vue from 'vue';
 import { skillTableRangeOptions } from '../utils/constants';
 export default Vue.extend({
 	name: 'SkillTableRangeSelector',
+	props: ['currentOption'],
 	data: function() {
 		return {
 			skillTableRangeOptions,
-			selectedOption: skillTableRangeOptions[0],
+			selectedOption: this.currentOption,
 		};
 	},
 	methods: {
-		handleClick: (option) => {
-			console.log(option);
+		handleClick: function(option) {
+			this.selectedOption = option;
+			this.$emit('changeSelectedRange', option);
 		},
 	},
 });

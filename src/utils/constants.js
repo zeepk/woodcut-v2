@@ -24,7 +24,7 @@ export const skillTableHeaders = [
 ]
 
 export const skillTableRangeOptions = [
-    { text: 'Week', value: 'weekGain' },
-    { text: 'Month', value: 'monthGain' },
-    { text: 'Year', value: 'yearGain' },
+    { text: 'Week', value: 'weekGain', sortable: false, },
+    { text: 'Month', value: 'monthGain', sortable: false, },
+    { text: 'Year', value: 'yearGain', sortable: false, },
 ]
