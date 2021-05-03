@@ -61,15 +61,19 @@ export default new Vuex.Store({
     },
     async getCurrentUserStatRecords(context) {
       context.commit('incrementLoadingCounter')
-      const options = {
-        url: `${gainsUrl}${context.state.currentUsername}`,
-        method: 'get',
-      };
-      const res = await requestWrapper(options);
-      context.commit('updateCurrentUserSkillGains', res.data.skillGains || [])
-      context.commit('updateCurrentUserMinigameGains', res.data.minigameGains || [])
-      context.commit('updateCurrentDisplayname', res.data.displayName || null)
-      context.commit('decrementLoadingCounter')
+      try {
+        const options = {
+          url: `${gainsUrl}${context.state.currentUsername}`,
+          method: 'get',
+        };
+        const res = await requestWrapper(options);
+        context.commit('updateCurrentUserSkillGains', res.data.skillGains || [])
+        context.commit('updateCurrentUserMinigameGains', res.data.minigameGains || [])
+        context.commit('updateCurrentDisplayname', res.data.displayName || null)        
+        context.commit('decrementLoadingCounter')
+      } catch {
+        context.commit('decrementLoadingCounter')
+      }
     }
   }
 });
