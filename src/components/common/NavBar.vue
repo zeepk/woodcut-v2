@@ -45,7 +45,7 @@ export default Vue.extend({
 			const formattedUsername = this.username
 				.toLowerCase()
 				.split(' ')
-				.join('%2B');
+				.join('+');
 			this.setCurrentUsername({
 				username: formattedUsername,
 			});
