@@ -47,7 +47,7 @@ export default Vue.extend({
 				.split(' ')
 				.join('+');
 			this.setCurrentUsername({
-				username: formattedUsername,
+				username: this.username,
 			});
 			this.$router.push({
 				...usernameRoute,

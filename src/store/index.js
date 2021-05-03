@@ -40,7 +40,7 @@ export default new Vuex.Store({
       state.loadingCounter = Math.max(state.loadingCounter - 1, 0);
     },
     updateCurrentUsername(state, username) {
-      state.currentUsername = username.toLowerCase().split(' ').join('+')
+      state.currentUsername = username;
     },
     updateCurrentDisplayname(state, displayname) {
       state.currentDisplayname = displayname
