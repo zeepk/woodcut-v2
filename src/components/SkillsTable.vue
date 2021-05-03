@@ -7,18 +7,18 @@
 			hide-default-footer
 		>
 			<template v-slot:[`header.weekGain`]="{}">
-				<SkillTableRangeSelector 
-				v-on:changeSelectedRange="changeSelectedRange(...arguments)" 
+				<SkillTableRangeSelector
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)"
 				v-bind:currentOption="selectedRange" />
 			</template>
 			<template v-slot:[`header.monthGain`]="{}">
-				<SkillTableRangeSelector 
-				v-on:changeSelectedRange="changeSelectedRange(...arguments)" 
+				<SkillTableRangeSelector
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)"
 				v-bind:currentOption="selectedRange" />
 			</template>
 			<template v-slot:[`header.yearGain`]="{}">
-				<SkillTableRangeSelector 
-				v-on:changeSelectedRange="changeSelectedRange(...arguments)" 
+				<SkillTableRangeSelector
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)"
 				v-bind:currentOption="selectedRange" />
 			</template>
 			<template v-slot:[`item.skillIcon`]="{ item }">
@@ -54,7 +54,7 @@ import Vue from 'vue';
 import SkillTableRangeSelector from '../components/SkillTableRangeSelector.vue';
 import SkillTableGainItem from '../components/SkillTableGainItem.vue';
 import sampleGains from '../assets/temp/sampleGainsResponse.json';
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 import { skillTableHeaders, skillTableRangeOptions } from '../utils/constants';
 import { skillIcon, skillNameArray } from '../utils/helperFunctions';
 
@@ -73,10 +73,6 @@ export default Vue.extend({
 		};
 	},
 	methods: {
-		...mapActions({
-			setCurrentUsername: 'setCurrentUsername',
-			getCurrentUserStatRecords: 'getCurrentUserStatRecords',
-		}),
 		changeSelectedRange(option) {
 			this.selectedRange = option;
 		},
@@ -101,11 +97,6 @@ export default Vue.extend({
 		},
 		tableHeaders: function() {
 			return [...this.skillTableHeaders, this.selectedRange];
-		}
-	},
-	async mounted() {
-		if (!this.isDev) {
-			await this.getCurrentUserStatRecords();
 		}
 	},
 });

@@ -12,6 +12,11 @@ export const homeHeader = 'Woodcut';
 
 // data
 
+export const statTableTabs = [
+    { text: 'Skills'},
+    { text: 'Minigames'},
+]
+
 export const skillTableHeaders = [
     {
         text: 'Skill',

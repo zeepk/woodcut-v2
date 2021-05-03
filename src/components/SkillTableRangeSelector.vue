@@ -2,7 +2,7 @@
 	<div class="d-flex flex-row align-center">
 		<v-menu>
 			<template v-slot:activator="{ on, attrs }">
-				<v-btn color="primary" dark v-bind="attrs" v-on="on">
+				<v-btn class="green lighten-4" v-bind="attrs" v-on="on">
 					{{ selectedOption.text }}
 				</v-btn>
 			</template>
