@@ -2,19 +2,16 @@
 	<div class="ma-10">
 		<h3>{{displayName}}</h3>
 		<StatsTableContainer />
-		<SkillsTable />
 	</div>
 </template>
 
 <script lang="js">
 import Vue from 'vue';
-import SkillsTable from '../components/SkillsTable.vue';
 import StatsTableContainer from '../components/StatsTableContainer.vue';
 import { mapGetters, mapActions } from 'vuex';
 export default Vue.extend({
 	name: 'PlayerLandingPage',
 	components: {
-		SkillsTable,
 StatsTableContainer	},
 	computed: {
 		...mapGetters({

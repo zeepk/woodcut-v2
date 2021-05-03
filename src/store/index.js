@@ -8,6 +8,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 
   state: {
+    loadingCounter: 0,
     currentUsername: null,
     currentDisplayname: null,
     currentUserSkillGains: [],
@@ -15,6 +16,8 @@ export default new Vuex.Store({
   },
 
   getters: {
+    isLoading: (state) => state.loadingCounter > 0,
+    isDev: () => process.env.NODE_ENV === 'development',
     getCurrentUsername: state => {
       return state.currentUsername
     },
@@ -24,10 +27,18 @@ export default new Vuex.Store({
     currentUserSkillGains: state => {
       return state.currentUserSkillGains
     },
-    isDev: () => process.env.NODE_ENV === 'development'
+    currentUserMinigameGains: state => {
+      return state.currentUserMinigameGains
+    },
   },
 
   mutations: {
+    incrementLoadingCounter(state) {
+      state.loadingCounter = state.loadingCounter + 1;
+    },
+    decrementLoadingCounter(state) {
+      state.loadingCounter = Math.max(state.loadingCounter - 1, 0);
+    },
     updateCurrentUsername(state, username) {
       state.currentUsername = username.toLowerCase().split(' ').join('+')
     },
@@ -36,6 +47,9 @@ export default new Vuex.Store({
     },
     updateCurrentUserSkillGains(state, gains) {
       state.currentUserSkillGains = gains
+    },
+    updateCurrentUserMinigameGains(state, gains) {
+      state.currentUserMinigameGains = gains
     }
   },
 
@@ -46,13 +60,16 @@ export default new Vuex.Store({
       }
     },
     async getCurrentUserStatRecords(context) {
+      context.commit('incrementLoadingCounter')
       const options = {
         url: `${gainsUrl}${context.state.currentUsername}`,
         method: 'get',
       };
       const res = await requestWrapper(options);
       context.commit('updateCurrentUserSkillGains', res.data.skillGains || [])
+      context.commit('updateCurrentUserMinigameGains', res.data.minigameGains || [])
       context.commit('updateCurrentDisplayname', res.data.displayName || null)
+      context.commit('decrementLoadingCounter')
     }
   }
 });

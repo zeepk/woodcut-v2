@@ -323,7 +323,7 @@
             "dxpGain": null
         }
     ],
-    "minigameGains": [
+    "sampleMinigameGains": [
         {
             "minigameId": 29,
             "score": 0,

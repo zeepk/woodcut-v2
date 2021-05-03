@@ -2,39 +2,32 @@
 	<div class="ma-10">
 		<v-data-table
 			:headers="tableHeaders"
-			:items="skills"
+			:items="minigames"
 			disable-pagination
 			hide-default-footer
 		>
 			<template v-slot:[`header.weekGain`]="{}">
 				<SkillTableRangeSelector
-					v-on:changeSelectedRange="changeSelectedRange(...arguments)"
-					v-bind:currentOption="selectedRange"
-				/>
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)"
+				v-bind:currentOption="selectedRange" />
 			</template>
 			<template v-slot:[`header.monthGain`]="{}">
 				<SkillTableRangeSelector
-					v-on:changeSelectedRange="changeSelectedRange(...arguments)"
-					v-bind:currentOption="selectedRange"
-				/>
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)"
+				v-bind:currentOption="selectedRange" />
 			</template>
 			<template v-slot:[`header.yearGain`]="{}">
 				<SkillTableRangeSelector
-					v-on:changeSelectedRange="changeSelectedRange(...arguments)"
-					v-bind:currentOption="selectedRange"
-				/>
+				v-on:changeSelectedRange="changeSelectedRange(...arguments)"
+				v-bind:currentOption="selectedRange" />
 			</template>
 			<template v-slot:[`item.skillIcon`]="{ item }">
 				<div class="d-flex flex-row align-center">
-					<v-img :src="item.skillIcon" class="icon--skill mr-1" />
-					<div>{{ item.skillName }}</div>
+					<div>{{ item.minigameName }}</div>
 				</div>
 			</template>
-			<template v-slot:[`item.level`]="{ item }">
-				<div>{{ calcVirtualLevel(item) }}</div>
-			</template>
 			<template v-slot:[`item.xp`]="{ item }">
-				<div>{{ item.xp.toLocaleString('en', { useGrouping: true }) }}</div>
+				<div>{{ item.score.toLocaleString('en', { useGrouping: true }) }}</div>
 			</template>
 			<template v-slot:[`item.rank`]="{ item }">
 				<div>{{ item.rank.toLocaleString('en', { useGrouping: true }) }}</div>
@@ -60,11 +53,11 @@ import Vue from 'vue';
 import SkillTableRangeSelector from '../components/SkillTableRangeSelector.vue';
 import SkillTableGainItem from '../components/SkillTableGainItem.vue';
 import { mapGetters } from 'vuex';
-import { skillTableHeaders, skillTableRangeOptions } from '../utils/constants';
-import { skillIcon, skillNameArray, calcVirtualLevel } from '../utils/helperFunctions';
+import { minigameTableHeaders, skillTableRangeOptions } from '../utils/constants';
+import { rs3Stats } from '../utils/helperFunctions';
 
 export default Vue.extend({
-	name: 'SkillsTable',
+	name: 'MinigamesTable',
 	components: {
 		SkillTableRangeSelector,
 		SkillTableGainItem,
@@ -72,10 +65,9 @@ export default Vue.extend({
 	data() {
 		return {
 			skillTableRangeOptions,
-			skillIcon,
-			calcVirtualLevel,
-			skillTableHeaders,
+			rs3Stats,
 			selectedRange: skillTableRangeOptions[0],
+			minigameTableHeaders
 		};
 	},
 	methods: {
@@ -85,22 +77,21 @@ export default Vue.extend({
 	},
 	computed: {
 		...mapGetters({
-			skillGains: 'currentUserSkillGains',
+			minigameGains: 'currentUserMinigameGains',
 			isDev: 'isDev',
 		}),
-		skills: function() {
+		minigames: function() {
 			// if local, use sample data so we don't throttle the official API
-			const skills = this.skillGains;
-			return skills.map((s) => {
+			const minigames = this.minigameGains;
+			return minigames.map((s) => {
 				return {
 					...s,
-					skillIcon: skillIcon(s.skillId),
-					skillName: skillNameArray[s.skillId],
+					minigameName: rs3Stats[s.minigameId],
 				};
 			});
 		},
 		tableHeaders: function() {
-			return [...this.skillTableHeaders, this.selectedRange];
+			return [...this.minigameTableHeaders, this.selectedRange];
 		}
 	},
 });

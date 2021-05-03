@@ -25,6 +25,7 @@
 import Vue from 'vue';
 import { navTitle, searchPlaceholder } from '../../utils/constants';
 import { usernameRoute } from '../../router/index';
+import { mapActions } from 'vuex';
 
 export default Vue.extend({
 	name: 'NavBar',
@@ -36,21 +37,32 @@ export default Vue.extend({
 		};
 	},
 	methods: {
-		handleSubmit() {
+		...mapActions({
+			getCurrentUserStatRecords: 'getCurrentUserStatRecords',
+			setCurrentUsername: 'setCurrentUsername',
+		}),
+		async handleSubmit() {
 			const formattedUsername = this.username
 				.toLowerCase()
 				.split(' ')
 				.join('+');
-			this.$store.dispatch('setCurrentUsername', {
+			this.setCurrentUsername({
 				username: formattedUsername,
 			});
 			this.$router.push({
 				...usernameRoute,
 				params: { username: formattedUsername },
 			});
-			this.$store.dispatch('getCurrentUserStatRecords');
+			await this.getCurrentUserStatRecords();
 		},
 	},
+	mounted() {
+		if(this.$route.params.username){
+						this.setCurrentUsername({
+							username: this.$route.params.username,
+			});
+				}
+	}
 });
 </script>
 

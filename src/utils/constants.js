@@ -28,6 +28,16 @@ export const skillTableHeaders = [
     { text: 'Day', value: 'dayGain' },
 ]
 
+export const minigameTableHeaders = [
+    {
+        text: 'Minigame',
+        value: 'minigameName',
+    },
+    { text: 'Score', value: 'score' },
+    { text: 'Rank', value: 'rank' },
+    { text: 'Day', value: 'dayGain' },
+]
+
 export const skillTableRangeOptions = [
     { text: 'Week', value: 'weekGain', sortable: false, },
     { text: 'Month', value: 'monthGain', sortable: false, },
