@@ -98,7 +98,7 @@ export const skillIcon = (id) => {
 };
 
 export const calcVirtualLevel = (rowData) => {
-	if (rowData.xp < 14391160 || rowData.name === 'Overall') {
+	if (rowData.xp < 14391160 || rowData.skillId === 0) {
 		return rowData.level;
 	} else if (rowData.xp >= 104273167) {
 		return 120;
